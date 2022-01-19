@@ -15,7 +15,7 @@ Required parts are listed below. For all printed parts, the recommended printing
 
 | Part Name                                                   | Quantity | Link                                                         | Info                |
 | ----------------------------------------------------------- | -------- | ------------------------------------------------------------ | ------------------- |
-| leg_tip                                                     | 2        | [STL file](hardware\stl)                                     | Printed part        |
+| leg_tip                                                     | 2        | [STL file](hardware/stl)                                     | Printed part        |
 | leg_tip_MIR                                                 | 2        | /                                                            | /                   |
 | leg_2                                                       | 2        | /                                                            | /                   |
 | leg_2_MIR                                                   | 2        | /                                                            | /                   |
@@ -52,8 +52,8 @@ After printing your parts, insert the bearing at all 5mm holes locates around ro
 
 The robot consists 4 legs and a body frame. Assembly 2 legs first.
 
-![leg_ass_1](pic\leg_ass_1.jpg)
+![leg_ass_1](pic/leg_ass_1.jpg)
 
 Assembly another 2 mirrored legs. Then link all legs to the body frame.
 
-<img src="pic\body_ass_1.jpg" alt="body_ass_1" style="zoom:67%;" />
+<img src="pic/body_ass_1.jpg" alt="body_ass_1" style="zoom:67%;" />
