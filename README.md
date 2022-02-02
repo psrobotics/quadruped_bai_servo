@@ -50,6 +50,8 @@ Required parts are listed below. For all printed parts, the recommended printing
 
 After printing your parts, insert the bearing at all 5mm holes locates around rotations joints. Then fasten  parts with M3 screws. Remember to check the rotation friction, make sure all joints can rotates freely with the servo installed. 
 
+### Body assembly
+
 The robot consists 4 legs and a body frame. Assembly 2 legs first.
 
 ![leg_ass_1](pic/leg_ass_1.jpg)
@@ -57,3 +59,6 @@ The robot consists 4 legs and a body frame. Assembly 2 legs first.
 Assembly another 2 mirrored legs. Then link all legs to the body frame.
 
 <img src="pic/body_ass_1.jpg" alt="body_ass_1" style="zoom:67%;" />
+
+### Servo Calibration
+
