@@ -60,5 +60,19 @@ Assembly another 2 mirrored legs. Then link all legs to the body frame.
 
 <img src="pic/body_ass_1.jpg" alt="body_ass_1" style="zoom:67%;" />
 
+### Feet Sensor (optional)
+
+Additional feet sensors can detect whether foot have touched the ground. This can be helpful when changing the state machine from 'swing state' to 'ground state'. The foot of Quadruped bai servo is switchable. If you decided to add feet sensors, some additional configurations are needed for the firmware (would be detailly explained later). 
+
+Feet sensors are built around micro switches,  
+
 ### Servo Calibration
+
+## Electronic
+
+## Simulate
+
+## Firmware
+
+
 
