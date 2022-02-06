@@ -50,21 +50,29 @@ Required parts are listed below. For all printed parts, the recommended printing
 
 After printing your parts, insert the bearing at all 5mm holes locates around rotations joints. Then fasten  parts with M3 screws. Remember to check the rotation friction, make sure all joints can rotates freely with the servo installed. 
 
+### Servo selection
+
+The performance of actuators is of fundamental importance for legged robots. Even when we're building a small one. Ideal actuators for this design should be highly back-drivable, have high power density, and be torque-controllable. However, most off-the-shelf servos have nothing to do with these features. There are some high voltage brushless servos (with magnetic encoders for feedback) with relatively good performance, but they're extremely costive at this size. If you have enough budget, why not build a brushless one? Considering that you'll need 12 servos for the assembly, my suggestion is just to go for the budget choice. The EMAX ES08A (metal gear version) works fine for my build. The nylon gear version is also acceptable, but they can easily be damaged under impact.
+
 ### Body assembly
 
 The robot consists 4 legs and a body frame. Assembly 2 legs first.
 
-![leg_ass_1](pic/leg_ass_1.jpg)
+<img src="pic/leg_ass_1.jpg" alt="leg_ass_1" style="zoom:60%;" />
 
 Assembly another 2 mirrored legs. Then link all legs to the body frame.
 
-<img src="pic/body_ass_1.jpg" alt="body_ass_1" style="zoom:67%;" />
+<img src="pic/body_ass_1.jpg" alt="body_ass_1" style="zoom:60%;" />
 
 ### Feet Sensor (optional)
 
 Additional feet sensors can detect whether foot have touched the ground. This can be helpful when changing the state machine from 'swing state' to 'ground state'. The foot of Quadruped bai servo is switchable. If you decided to add feet sensors, some additional configurations are needed for the firmware (would be detailly explained later). 
 
-Feet sensors are built around micro switches,  
+Feet sensors are built around micro switches,  which detect impact from specific directions. As for the result, this design didn't work that well. A good feet sensor solution should be able to detect impacts from all directions, with low latency and clear output. [Open Dynamic Robot Initiative](https://open-dynamic-robot-initiative.github.io/) has presented an elegant solution with infrared sensor. Take that as a reference, the ongoing Quadruped bai tiny will come with better feet sensors. Assembly the feet sensor as this pic shown. (Remember to print mirrored parts for right-side legs)
+
+<img src="pic/feet_sensor.jpg" alt="feet_sensor" style="zoom:30%;" />
+
+In order to increase the friction between feet and ground, additional high-friction coating is vital. I used some glued silicone sheet on the feet tip. You can also design your feet tip and print it with high-friction material.
 
 ### Servo Calibration
 
