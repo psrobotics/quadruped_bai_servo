@@ -90,11 +90,41 @@ Most servos have a limited motion range,  make sure the servo's motion range cov
 
 ## Electronic
 
+The controller board assembly includes servo controller, IMU, and dc-dc converter module. With an additional serial port, you can connect robot to a wireless or Bluetooth module that enables wireless control. Built around ATmega328P, the microcontroller's performance, IO is just not enough for such application. I encourage you take this schematic as a reference and switch to a high performance 32-bit microcontroller (something like STM32H7, ESP32). If you're more comfortable with AVR Arduino boards, use this design directly and it'll work.
 
+[PCBs](electronic/) are designed with [EAGLE](https://www.autodesk.com/products/eagle/free-download). Exported Gerber file is uploaded too. If you don't want to order the PCB, you can also make it using off-the-shelf components (Arduino nano, MPU 6050, dc-dc converter, etc).
+
+### Controller board pin assignment
+
+<img src="pic/controller_1.JPG" alt="ctr_brd" style="zoom:60%;" />
+
+Use ICSP to upload firmware and debug with the external serial port. The hardware IIC pins(A4,A5) are occupied by IMU (MPU6050 is also an 'old chip', you can replace with something like BNO080). 
+
+### DC-DC converter
+
+<img src="pic/dc_dc.JPG" alt="dc_dc" style="zoom:30%;" />
+
+Integrated boost converter to power servos. Pre-configured output voltage is 5.5V, you can change by [replacing](https://www.ti.com/lit/ds/symlink/tps61088.pdf?ts=1644121246192#:~:text=The%20TPS61088%20is%20a%20high,size%20solution%20in%20portable%20systems.&text=The%20device%20has%2010%2DA,voltage%20up%20to%2012.6%20V.) the feedback resistor. Plug this module to the DC-DC slot on controller board.
+
+### Battery
+
+Single-cell lithium batteries with high current output capability(>10A) are preferred. This project uses 18650, 18350 batteries. The [battery shelf](hardware/stl/step) can be printed and mounted under the robot frame.
+
+<img src="pic/batt.JPG" alt="batt" style="zoom:30%;" />
 
 ## Simulate
 
+<img src="pic/sim.gif" alt="simulate" style="zoom:150%;" />
+
+Simplified model in [v-rep](https://www.coppeliarobotics.com/). You can use remote API to develop your simulation.
+
+### Coordinate system in the simulation
+
+TODO, write this docu when I'm free.
+
 ## Firmware
+
+A simplified controller is implemented to generate trot pattern for walking. Here, I applied a state machine to easily synchronize a set of open foot trajectories (with feet sensor). The IMU unit is used to adjust body roll&pitch during the stance phase. Notice that this robot is only controlled on the kinematic level, don't expect it to resist external impacts during walking process.
 
 
 
