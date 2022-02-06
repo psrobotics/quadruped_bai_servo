@@ -1,7 +1,9 @@
 # Quadruped_bai_servo v1
 <img src="pic\quad_servo_cad.jpg" alt="quad_servo_cad" style="zoom:50%;" />
 
-A low cost 12DOF quadruped, actuated by hobby servos. Notice that this is a early version developed back in 2019. If you're looking for a high performance desktop quad, check out the ongoing [Quadruped bai tiny](https://github.com/psrobotics/Quadruped_bai_tiny)
+A low cost 12DOF quadruped, actuated by hobby servos. Notice that this is an early version developed back in 2019. If you're looking for a high performance desktop quad, check out the ongoing [Quadruped bai tiny](https://github.com/psrobotics/Quadruped_bai_tiny)
+
+This repository contains the models, BOM, electronic, simulate, as well as the source code of the project.
 
 ## Videos
 
@@ -66,13 +68,13 @@ Assembly another 2 mirrored legs. Then link all legs to the body frame.
 
 ### Feet Sensor (optional)
 
-Additional feet sensors can detect whether foot have touched the ground. This can be helpful when changing the state machine from 'swing state' to 'ground state'. The foot of Quadruped bai servo is switchable. If you decided to add feet sensors, some additional configurations are needed for the firmware (would be detailly explained later). 
+Additional feet sensors can detect whether foot have touched the ground. This can be helpful when changing the state machine from 'swing state' to 'stance state'. The foot of Quadruped bai servo is switchable. If you decided to add feet sensors, some additional configurations are needed for the firmware (would be detailly explained later). 
 
 Feet sensors are built around micro switches,  which detect impact from specific directions. As for the result, this design didn't work that well. A good feet sensor solution should be able to detect impacts from all directions, with low latency and clear output. [Open Dynamic Robot Initiative](https://open-dynamic-robot-initiative.github.io/) has presented an elegant solution with infrared sensor. Take that as a reference, the ongoing Quadruped bai tiny will come with better feet sensors. Assembly the feet sensor as this pic shown. (Remember to print mirrored parts for right-side legs)
 
 Only 3 printed parts are needed to assembly the feet sensor, check [STL file](hardware/stl/feet_sensor) here.
 
-<img src="pic/feet_sensor.JPG" alt="feet_sensor" style="zoom:30%;" />
+<img src="pic/feet_sensor.JPG" alt="feet_sensor" style="zoom:25%;" />
 
 In order to increase the friction between feet and ground, additional high-friction coating is vital. I used some glued silicone sheet on the feet tip. You can also design your feet tip and print it with high-friction material.
 
@@ -87,6 +89,8 @@ Most servos have a limited motion range,  make sure the servo's motion range cov
 <img src="pic/m_range_knee.JPG" alt="knee joint" style="zoom:60%;" />
 
 ## Electronic
+
+
 
 ## Simulate
 
