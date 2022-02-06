@@ -126,5 +126,7 @@ TODO, write this docu when I'm free.
 
 A simplified controller is implemented to generate trot pattern for walking. Here, I applied a state machine to easily synchronize a set of open foot trajectories (with feet sensor). The IMU unit is used to adjust body roll&pitch during the stance phase. Notice that this robot is only controlled on the kinematic level, don't expect it to resist external impacts during walking process.
 
+## License
 
+Under BSD-3-Clause license, COME WITH NO WARRANTIES, BUILD AT YOUR RISK.
 
