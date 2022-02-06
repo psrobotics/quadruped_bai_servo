@@ -70,11 +70,21 @@ Additional feet sensors can detect whether foot have touched the ground. This ca
 
 Feet sensors are built around micro switches,  which detect impact from specific directions. As for the result, this design didn't work that well. A good feet sensor solution should be able to detect impacts from all directions, with low latency and clear output. [Open Dynamic Robot Initiative](https://open-dynamic-robot-initiative.github.io/) has presented an elegant solution with infrared sensor. Take that as a reference, the ongoing Quadruped bai tiny will come with better feet sensors. Assembly the feet sensor as this pic shown. (Remember to print mirrored parts for right-side legs)
 
+Only 3 printed parts are needed to assembly the feet sensor, check [STL file](hardware/stl/feet_sensor) here.
+
 <img src="pic/feet_sensor.jpg" alt="feet_sensor" style="zoom:30%;" />
 
 In order to increase the friction between feet and ground, additional high-friction coating is vital. I used some glued silicone sheet on the feet tip. You can also design your feet tip and print it with high-friction material.
 
 ### Servo Calibration
+
+Most servos have a limited motion range,  make sure the servo's motion range covers leg linkage's joint limit shown in the following pics.  Also, pre-calibrate in this step by applying an initial PWM signal to servos before installing (eg. 0°). This enables all servos to have the same PWM-joint angle mapping. You can then fine-tuning them in the firmware.
+
+<img src="pic/m_range_ab.jpg" alt="ab joint" style="zoom:60%;" />
+
+<img src="pic/m_range_hip.jpg" alt="hip joint" style="zoom:60%;" />
+
+<img src="pic/m_range_knee.jpg" alt="knee joint" style="zoom:60%;" />
 
 ## Electronic
 
