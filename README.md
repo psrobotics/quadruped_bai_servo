@@ -108,7 +108,7 @@ Integrated boost converter to power servos. Pre-configured output voltage is 5.5
 
 ### Battery
 
-Single-cell lithium batteries with high current output capability(>10A) are preferred. This project uses 18650, 18350 batteries. The [battery shelf](hardware/stl/step) can be printed and mounted under the robot frame.
+Single-cell lithium batteries with high current output capability(>10A) are preferred. This project uses 18650, 18350 batteries. The [battery shelf](hardware/step) can be printed and mounted under the robot frame.
 
 <img src="pic/batt.JPG" alt="batt" style="zoom:30%;" />
 
